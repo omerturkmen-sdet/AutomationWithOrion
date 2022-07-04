@@ -11,11 +11,4 @@ public class TwitterAccountInfo {
 
 
 
-    /*
-
-    public static String email = "pukkulamlu@vusra.com";
-    public static String password = "P4ssword";
-    public static String username = "@trainin74296445";
-
-    */
 }
