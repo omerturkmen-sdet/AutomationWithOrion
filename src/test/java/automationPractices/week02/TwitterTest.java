@@ -1,4 +1,4 @@
-package automationPractices.week02.test;
+package automationPractices.week02;
 
 import automationPractices.TwitterAccountInfo;
 import automationPractices.week02.pages.TweetDetailsPage;
@@ -44,7 +44,11 @@ public class TwitterTest {
     }
 
 
-
+    /**
+     * Utilities.threadSleep() methodu test akışını daha net görebilmek için kullanıldı.
+     * Bu beklemeler kaldırıldığında da herhangi bir sorun olmayacaktır.
+     * İnternet hızınızla ilgili senkronizasyon sorunu durumunda WebDriverWait kullanarak çözebilirsiniz.
+     */
     @Test
     public void clickViewAfterSendingTweet(){
 

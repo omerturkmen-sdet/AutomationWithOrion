@@ -33,14 +33,15 @@ public class TwitterLoginPage {
     public WebElement passwordField;
 
 
+    /**
+     * Email ve şifre TwitterAccountInfo class'ından geliyor. Orda düzenleme yapmak gerekiyor
+     */
     public void loginTwitter() {
         loginButton.click();
 
-        //Utilities.threadSleep(2);
-
-        //WebElement emailField = driver.findElement(By.name("text"));
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(emailField));
         emailField.sendKeys(TwitterAccountInfo.email + Keys.ENTER);
-
 
         try {
             //Too many attempt
@@ -48,8 +49,6 @@ public class TwitterLoginPage {
         } catch (Exception e) {
             //Successful login
         }
-
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.visibilityOf(passwordField));
 
