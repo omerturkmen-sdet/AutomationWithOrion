@@ -1,4 +1,4 @@
-package automationPractices.week02;
+package automationPractices.week02.test;
 
 import automationPractices.TwitterAccountInfo;
 import automationPractices.week02.pages.TweetDetailsPage;
@@ -38,7 +38,7 @@ public class TwitterTest {
         wait = new WebDriverWait(driver,Duration.ofSeconds(10));
     }
 
-   // @AfterClass
+    @AfterClass
     public static void tearDown(){
         driver.quit();
     }
@@ -88,100 +88,3 @@ public class TwitterTest {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-    @Test
-    public void firstTest(){
-
-        TwitterLoginPage loginPage = new TwitterLoginPage(driver);
-
-        loginPage.loginTwitter();
-
-        Assert.assertEquals(driver.getTitle(),"Home / Twitter");
-
-        Random rn = new Random();
-        int randonNumber = rn.nextInt(1000);
-
-        TwitterHomePage homePage = new TwitterHomePage(driver);
-        homePage.dummyTweet("test tweet" + randonNumber);
-
-        homePage.profileNavigateButton.click();
-
-        new WebDriverWait(driver,Duration.ofSeconds(10)).until(ExpectedConditions.titleContains(TwitterAccountInfo.username));
-
-        driver.navigate().refresh();
-
-        WebElement firstTweet = driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-18u37iz'])[6]"));
-        new Actions(driver).moveToElement(firstTweet);
-
-        firstTweet.click();
-
-        WebElement clickElement = driver.findElement(By.xpath("//div[@data-testid='retweet']"));
-//        WebElement clickElement = driver.findElement(By.xpath("(//div[contains(@id,'id')])[3]/div[2]"));
-//
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click()",clickElement);
-
-        driver.findElement(By.xpath("//div[@data-testid='retweetConfirm']")).click();
-
-        WebElement retweetNumber = driver.findElement(By.xpath("//span[@data-testid='app-text-transition-container']/span/span"));
-        System.out.println("After retweet : " + retweetNumber.getText());
-    }
-
-
-    //@Test
-    public void secondTest(){
-
-        TwitterLoginPage loginPage = new TwitterLoginPage(driver);
-
-        loginPage.loginTwitter();
-
-        Assert.assertEquals(driver.getTitle(),"Home / Twitter");
-
-        Random rn = new Random();
-        int randonNumber = rn.nextInt(1000);
-
-        TwitterHomePage homePage = new TwitterHomePage(driver);
-        homePage.dummyTweet("test tweet" + randonNumber);
-
-        driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-18u37iz']/a")).click();
-
-
-        WebElement clickElement = driver.findElement(By.xpath("//div[@data-testid='retweet']"));
-//        WebElement clickElement = driver.findElement(By.xpath("(//div[contains(@id,'id')])[3]/div[2]"));
-//
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click()",clickElement);
-
-        driver.findElement(By.xpath("//div[@data-testid='retweetConfirm']")).click();
-
-        WebElement retweetNumber = driver.findElement(By.xpath("//span[@data-testid='app-text-transition-container']/span/span"));
-        System.out.println("After retweet : " + retweetNumber.getText());
-    }
- */
