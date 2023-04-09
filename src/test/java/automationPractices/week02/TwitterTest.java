@@ -45,9 +45,9 @@ public class TwitterTest {
 
 
     /**
-     * Utilities.threadSleep() methodu test akışını daha net görebilmek için kullanıldı.
-     * Bu beklemeler kaldırıldığında da herhangi bir sorun olmayacaktır.
-     * İnternet hızınızla ilgili senkronizasyon sorunu durumunda WebDriverWait kullanarak çözebilirsiniz.
+     * Utilities.threadSleep() method was used to see the test flow more clearly.
+     * Removing these waits will not cause any problems.
+     * In case of synchronization issues with your internet speed, you can solve it using WebDriverWait.
      */
     @Test
     public void clickViewAfterSendingTweet(){
