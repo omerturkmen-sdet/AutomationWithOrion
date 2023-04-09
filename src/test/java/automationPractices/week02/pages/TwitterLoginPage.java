@@ -34,7 +34,7 @@ public class TwitterLoginPage {
 
 
     /**
-     * Email ve şifre TwitterAccountInfo class'ından geliyor. Orda düzenleme yapmak gerekiyor
+     * Email and password come from TwitterAccountInfo class. You need to edit there
      */
     public void loginTwitter() {
         loginButton.click();
